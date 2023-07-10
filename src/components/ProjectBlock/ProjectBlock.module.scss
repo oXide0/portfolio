@@ -1,0 +1,53 @@
+@import "../../style/variables.scss";
+
+.project__block {
+    width: 576px;
+    display: flex;
+    gap: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(94, 234, 212, 0.1);  
+        box-shadow: 0 0 20px rgba(94, 234, 212, 0.1);
+    }
+}
+.block__img {
+    width: 200px;
+    .img {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+.block__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .block__title {
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-color;
+    }
+    .block__text {
+        font-size: 16px;
+        color: $secondary-color;
+        max-width: 400px;
+        line-height: 20px;
+    }
+    .block__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+@media (min-width: 0) and (max-width: 768px) {
+    .project__block {
+        width: 100% !important;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .block__img {
+        width: 100%;
+    }
+}
