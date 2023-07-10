@@ -89,11 +89,12 @@
     text-align: center;
     color: $text-color;
     text-transform: uppercase;
+    padding-bottom: 20px;
 }
 .col__section_3 {
     padding-top: 100px;
     .projects {
-        padding-top: 80px;
+        padding-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 20px;
