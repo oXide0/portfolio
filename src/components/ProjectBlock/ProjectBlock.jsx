@@ -4,7 +4,7 @@ import { v1 } from 'uuid';
 
 function ProjectBlock({ title, text, skills, url, href }) {
 	const redirectToPage = () => {
-		window.location.href = href;
+		window.open(href, '_blank');
 	};
 
 	return (
