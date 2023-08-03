@@ -1,14 +1,16 @@
 import style from './ProjectBlock.module.scss';
 import SkillChip from '../SkillChip/SkillChip';
 import { v1 } from 'uuid';
+import { motion } from 'framer-motion';
+import { forwardRef } from 'react';
 
-function ProjectBlock({ title, text, skills, url, href }) {
+export const ProjectBlock = forwardRef(function ProjectBlock({ title, text, skills, url, href }, ref) {
 	const redirectToPage = () => {
 		window.open(href, '_blank');
 	};
 
 	return (
-		<div className={style.project__block} onClick={redirectToPage}>
+		<div className={style.project__block} onClick={redirectToPage} ref={ref}>
 			<div className={style.block__img}>
 				<img src={`img/${url}.png`} alt='project' className={style.img} />
 			</div>
@@ -23,6 +25,6 @@ function ProjectBlock({ title, text, skills, url, href }) {
 			</div>
 		</div>
 	);
-}
+});
 
-export default ProjectBlock;
+export const MProjectBlock = motion(ProjectBlock);

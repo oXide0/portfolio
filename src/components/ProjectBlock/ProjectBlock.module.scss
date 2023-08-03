@@ -1,4 +1,4 @@
-@import "../../style/variables.scss";
+@import "../../styles/variables.scss";
 
 .project__block {
     width: 576px;
@@ -14,9 +14,9 @@
     }
 }
 .block__img {
-    width: 200px;
+    
     .img {
-        width: 100%;
+        width: 150px;
         border-radius: 5px;
     }
 }

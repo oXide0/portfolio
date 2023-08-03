@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, forwardRef } from 'react';
 import Link from '../Link/Link';
 import style from './Menu.module.scss';
+import { motion } from 'framer-motion';
 
-function Menu({ skills, projects }) {
+export const Menu = forwardRef(function Menu({ skills, projects }, ref) {
 	const [activeLink, setActiveLink] = useState('about');
 
 	useEffect(() => {
@@ -22,7 +23,7 @@ function Menu({ skills, projects }) {
 	}, []);
 
 	return (
-		<nav className={style.nav}>
+		<nav ref={ref} className={style.nav}>
 			<Link link='about' active={activeLink} setActive={setActiveLink}>
 				about
 			</Link>
@@ -34,6 +35,6 @@ function Menu({ skills, projects }) {
 			</Link>
 		</nav>
 	);
-}
+});
 
-export default Menu;
+export const MMenu = motion(Menu);

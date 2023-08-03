@@ -1,4 +1,4 @@
-@import "./style//variables.scss";
+@import "./styles/variables.scss";
 
 .left_col {
     position: fixed;
@@ -16,8 +16,9 @@
     .info {
         color: $secondary-color;
         padding-top: 25px;
-        max-width: 300px;
         line-height: 23px;
+        display: flex;
+        flex-direction: column;
     }
     .icons {
         padding-top: 150px;

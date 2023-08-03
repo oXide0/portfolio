@@ -1,9 +1,12 @@
 import style from './App.module.scss';
-import Menu from './components/Menu/Menu';
+import { MMenu } from './components/Menu/Menu';
 import IconLink from './components/IconLink/IconLink';
 import CustomCursor from './components/CustomCursor/CustomCursor';
-import ProjectBlock from './components/ProjectBlock/ProjectBlock';
+import { MProjectBlock } from './components/ProjectBlock/ProjectBlock';
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
+import { textAnimation, blockAnimation, titleAnimation } from './utils/animations';
+import { projectsData } from './utils/projectsData';
 
 function App() {
 	const skills = useRef(null);
@@ -12,24 +15,66 @@ function App() {
 	return (
 		<div className='wrapper'>
 			<CustomCursor />
-			<div className={style.left_col}>
-				<h1 className={style.title}>Nazar Korchevskyi</h1>
-				<h2 className={style.subtitle}>Frontend Developer</h2>
-				<p className={style.info}>
-					I develop and maintain web applications. Bridging creativity and functionality in web development.
-				</p>
-				<Menu skills={skills} projects={projects} />
-				<div className={style.icons}>
+			<motion.div className={style.left_col}>
+				<motion.h1
+					custom={1}
+					variants={textAnimation}
+					initial='hidden'
+					whileInView='visible'
+					className={style.title}
+				>
+					Nazar Korchevskyi
+				</motion.h1>
+				<motion.h2
+					custom={2}
+					variants={textAnimation}
+					initial='hidden'
+					whileInView='visible'
+					className={style.subtitle}
+				>
+					Frontend Developer
+				</motion.h2>
+				<motion.p
+					custom={3}
+					variants={textAnimation}
+					initial='hidden'
+					whileInView='visible'
+					className={style.info}
+				>
+					<span>I develop and maintain web applications.</span>
+					<span>Bridging creativity and functionality in web development.</span>
+				</motion.p>
+				<MMenu
+					custom={3}
+					variants={textAnimation}
+					initial='hidden'
+					whileInView='visible'
+					skills={skills}
+					projects={projects}
+				/>
+				<motion.div
+					custom={4}
+					variants={textAnimation}
+					initial='hidden'
+					whileInView='visible'
+					className={style.icons}
+				>
 					<IconLink url='https://github.com/oXide0' img='github_icon' />
 					<IconLink url='https://www.linkedin.com/in/nazar-korchevskyi/' img='linkedin_icon' />
 					<IconLink url='' img='mail_icon' type='mail' />
 					<IconLink url='doc/Korchevskyi_Nazar_Frontend.pdf' img='pdf_icon' />
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 			<div className={style.block}></div>
 			<div className={style.block_2}></div>
 			<div className={style.col}>
-				<div className={style.col__section_1}>
+				<motion.div
+					variants={blockAnimation}
+					viewport={{ amount: 0.2 }}
+					initial='hidden'
+					whileInView='visible'
+					className={style.col__section_1}
+				>
 					<p className={style.info__text}>
 						My journey into the enchanting world of{' '}
 						<span className={style.highlist__text}>web development</span> commenced in the year 2023🚀.
@@ -62,46 +107,61 @@ function App() {
 						captivating endeavors await me. I extend my gratitude🙏 for your attention and invite you to
 						explore my experience and projects below👇.
 					</p>
-				</div>
+				</motion.div>
 				<div className={style.col__section_2} ref={skills}>
-					<h1 className={style.col__title}>Skills</h1>
-					<div className={style.section2__row}>
+					<motion.h1
+						className={style.col__title}
+						variants={titleAnimation}
+						initial='hidden'
+						whileInView='visible'
+					>
+						Skills
+					</motion.h1>
+					<motion.div
+						variants={blockAnimation}
+						initial='hidden'
+						whileInView='visible'
+						custom={2}
+						className={style.section2__row}
+					>
 						<img src='img/react_icon.svg' alt='react_icon' className={style.skill_icon} />
 						<img src='img/javascript_icon.svg' alt='javascript_icon' className={style.skill_icon} />
 						<img src='img/sass_icon.svg' alt='sass_icon' className={style.skill_icon} />
 						<img src='img/figma_icon.svg' alt='figma_icon' className={style.skill_icon} />
-					</div>
-					<div className={style.section2__row}>
+					</motion.div>
+					<motion.div
+						variants={blockAnimation}
+						initial='hidden'
+						whileInView='visible'
+						custom={2}
+						className={style.section2__row}
+					>
 						<img src='img/redux_icon.svg' alt='redux_icon' className={style.skill_icon} />
 						<img src='img/typescript_icon.svg' alt='typescript_icon' className={style.skill_icon} />
 						<img src='img/mui_icon.svg' alt='mui_icon' className={style.skill_icon} />
 						<img src='img/git_icon.svg' alt='git_icon' className={style.skill_icon} />
-					</div>
+					</motion.div>
 				</div>
 				<div className={style.col__section_3} ref={projects}>
-					<h1 className={style.col__title}>Projects</h1>
+					<motion.h1
+						className={style.col__title}
+						variants={titleAnimation}
+						initial='hidden'
+						whileInView='visible'
+					>
+						Projects
+					</motion.h1>
 					<div className={style.projects}>
-						<ProjectBlock
-							title='Delivery App'
-							text='The project allows users to register and access stores, where they can choose a store, then add goods to the cart (get data from the database). The project also has such pages as History of orders and Coupons.'
-							skills={['React', 'Redux Toolkit', 'RTQ', 'TypeScript', 'MUI', 'Json-Server']}
-							url='delivery_app'
-							href='https://silly-stardust-cefd5f.netlify.app/'
-						/>
-						<ProjectBlock
-							title='Movie Search App'
-							text='An app that allows you to see a list of popular movies. Find the ones you like and add them to your list. The goal was also to practice with RTQ and internalization of the application.'
-							skills={['React', 'Redux Toolkit', 'RTQ', 'TypeScript', 'MUI', 'TMDB-api', 'i18n-react']}
-							url='movie_app'
-							href='https://649f47084d7516437a2339b0--meek-croissant-0faefc.netlify.app/'
-						/>
-						<ProjectBlock
-							title='Note App'
-							text='The project is based on Google Keep. Here you can create notes and move them to different sections. The main goal was to practice with new technologies.'
-							skills={['React', 'Redux Toolkit', 'MUI', 'SCSS']}
-							url='note_app'
-							href='https://glittery-fenglisu-9dec9c.netlify.app/'
-						/>
+						{projectsData.map((project) => (
+							<MProjectBlock
+								key={project.id}
+								variants={blockAnimation}
+								initial='hidden'
+								whileInView='visible'
+								custom={2}
+								{...project}
+							/>
+						))}
 					</div>
 				</div>
 				<div className={style.footer__title}>
