@@ -2,7 +2,7 @@ import style from './App.module.scss';
 import { MMenu } from './components/Menu/Menu';
 import IconLink from './components/IconLink/IconLink';
 import CustomCursor from './components/CustomCursor/CustomCursor';
-import { MProjectBlock } from './components/ProjectBlock/ProjectBlock';
+import ProjectBlock from './components/ProjectBlock/ProjectBlock';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { textAnimation, blockAnimation, titleAnimation } from './utils/animations';
@@ -151,18 +151,17 @@ function App() {
 					>
 						Projects
 					</motion.h1>
-					<div className={style.projects}>
+					<motion.div
+						className={style.projects}
+						variants={blockAnimation}
+						initial='hidden'
+						whileInView='visible'
+						custom={2}
+					>
 						{projectsData.map((project) => (
-							<MProjectBlock
-								key={project.id}
-								variants={blockAnimation}
-								initial='hidden'
-								whileInView='visible'
-								custom={2}
-								{...project}
-							/>
+							<ProjectBlock key={project.id} {...project} />
 						))}
-					</div>
+					</motion.div>
 				</div>
 				<div className={style.footer__title}>
 					<a href='https://github.com/oXide0?tab=repositories'>More of my projects</a>

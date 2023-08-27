@@ -1,10 +1,9 @@
 import style from './ProjectBlock.module.scss';
 import SkillChip from '../SkillChip/SkillChip';
 import { v1 } from 'uuid';
-import { motion } from 'framer-motion';
 import { forwardRef } from 'react';
 
-export const ProjectBlock = forwardRef(function ProjectBlock({ title, text, skills, url, href }, ref) {
+const ProjectBlock = forwardRef(function ProjectBlock({ title, text, skills, url, href }, ref) {
 	const redirectToPage = () => {
 		window.open(href, '_blank');
 	};
@@ -27,4 +26,4 @@ export const ProjectBlock = forwardRef(function ProjectBlock({ title, text, skil
 	);
 });
 
-export const MProjectBlock = motion(ProjectBlock);
+export default ProjectBlock;

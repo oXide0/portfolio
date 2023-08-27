@@ -9,18 +9,18 @@ export const projectsData = [
 	},
 	{
 		id: 2,
+		title: 'VENTSCAPE',
+		text: 'VENTSCAPE is an event platform with authorization, profile settings, CRUD operations for events and much more. The project was created to learn new technologies.',
+		skills: ['React', 'FIREBASE', 'REACT-ROUTER', 'REDUX TOOLKIT', 'TYPESCRIPT', 'TAILWINDCSS'],
+		url: 'ventscape',
+		href: 'https://github.com/oXide0/Ventscape-Event-Platform',
+	},
+	{
+		id: 3,
 		title: 'Movie Search App',
 		text: 'An app that allows you to see a list of popular movies. Find the ones you like and add them to your list. The goal was also to practice with RTQ and internalization of the application.',
 		skills: ['React', 'Redux Toolkit', 'RTQ', 'TypeScript', 'MUI', 'TMDB-api', 'i18n-react'],
 		url: 'movie_app',
-		href: 'https://649f47084d7516437a2339b0--meek-croissant-0faefc.netlify.app/',
-	},
-	{
-		id: 3,
-		title: 'Note App',
-		text: 'The project is based on Google Keep. Here you can create notes and move them to different sections. The main goal was to practice with new technologies.',
-		skills: ['React', 'Redux Toolkit', 'MUI', 'SCSS'],
-		url: 'note_app',
-		href: 'https://glittery-fenglisu-9dec9c.netlify.app/',
+		href: 'https://meek-croissant-0faefc.netlify.app/',
 	},
 ];
