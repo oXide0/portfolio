@@ -141,8 +141,8 @@ const App = () => {
 					</motion.div>
 				</IconContext.Provider>
 			</div>
-			<div className='w-80 h-80 opacity-50 rounded-full bg-teal-600 shadow-2xl shadow-teal-600 fixed top-0 left-0 pointer-events-none -z-10 blur-3xl'></div>
-			<div className='w-80 h-80 opacity-50 rounded-full bg-teal-600 shadow-2xl shadow-teal-600 fixed bottom-0 right-0 pointer-events-none -z-10 blur-3xl'></div>
+			<div className='w-80 h-80 opacity-60 rounded-full bg-teal-600 shadow-2xl shadow-teal-600 fixed top-0 left-0 pointer-events-none -z-10 blur-3xl'></div>
+			<div className='w-80 h-80 opacity-60 rounded-full bg-teal-600 shadow-2xl shadow-teal-600 fixed bottom-0 right-0 pointer-events-none -z-10 blur-3xl'></div>
 			<div className='pl-600 max-xl:pl-500 max-lg:pl-0'>
 				<motion.div
 					variants={blockAnimation}
