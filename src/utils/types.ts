@@ -1,1 +1,1 @@
-export type linksType = 'about' | 'skills' | 'projects';
+export type linksType = 'about' | 'experience' | 'projects';
