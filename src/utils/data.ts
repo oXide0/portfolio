@@ -3,9 +3,20 @@ export const projectsData = [
         id: 1,
         title: 'VENTSCAPE',
         text: 'VENTSCAPE is an event platform with authorization, profile settings, CRUD operations for events and much more. The project was created to learn new technologies.',
-        skills: ['React', 'FIREBASE', 'REDUX TOOLKIT', 'chakra ui'],
+        skills: [
+            'React',
+            'Node.js',
+            'Express.js',
+            'PostgreSQL',
+            'prisma',
+            'redux toolkit',
+            'rtk query',
+            'Firebase',
+            'jwt',
+            's3 bucket',
+        ],
         url: 'ventscape_app',
-        href: 'https://ventscape-ad39d.web.app/',
+        href: 'https://ventscape.netlify.app/',
     },
     {
         id: 2,
@@ -13,7 +24,7 @@ export const projectsData = [
         text: 'The project allows users to register and access stores, where they can choose a store, then add goods to the cart (get data from the database). The project also has such pages as History of orders and Coupons.',
         skills: ['React', 'Redux Toolkit', 'RTK Query', 'JWT', 'mui'],
         url: 'delivery_app',
-        href: 'https://delivery-app-1.netlify.app/',
+        href: 'https://github.com/oXide0/Delivery-App',
     },
 ];
 
