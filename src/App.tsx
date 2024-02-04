@@ -50,6 +50,10 @@ const App = () => {
         };
     }, []);
 
+    // useEffect(() => {
+    //     console.log(1);
+    // });
+
     return (
         <div className='max-w-7xl mx-auto px-4 flex max-lg:flex-col max-lg:px-10'>
             <CustomCursor />
@@ -197,7 +201,7 @@ const App = () => {
                         Experience
                     </h2>
                     {experienceData.map((experience) => (
-                        <ExperienceBlock {...experience} />
+                        <ExperienceBlock key={experience.id} {...experience} />
                     ))}
                 </motion.div>
                 <motion.div

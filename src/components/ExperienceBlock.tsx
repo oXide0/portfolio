@@ -19,11 +19,11 @@ const ExperienceBlock = memo(({ title, text, skills, date, company }: Experience
                 <h1 className='text-slate-100 font-medium text-md group-hover:text-teal-300'>
                     {title} · {company}
                 </h1>
-                <p className='text-slate-400 pt-2 text-sm'>
-                    {text.map((sen) => (
-                        <p>- {sen}</p>
+                <div className='text-slate-400 pt-2 text-sm'>
+                    {text.map((sen, index) => (
+                        <p key={index}>- {sen}</p>
                     ))}
-                </p>
+                </div>
                 <div className='flex gap-2 flex-wrap pt-3'>
                     {skills.map((skill, index) => (
                         <Chip key={index}>{skill}</Chip>
