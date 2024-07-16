@@ -16,15 +16,15 @@ export const projectsData = [
             's3 bucket',
         ],
         url: 'ventscape_app',
-        href: 'https://ventscape.netlify.app/',
+        href: 'https://github.com/oXide0/Ventscape',
     },
     {
         id: 2,
         title: 'Delivery App',
         text: 'The project allows users to register and access stores, where they can choose a store, then add goods to the cart (get data from the database). The project also has such pages as History of orders and Coupons.',
-        skills: ['React', 'Redux Toolkit', 'RTK Query', 'JWT', 'mui'],
+        skills: ['React', 'Node.js', 'Nest.js', 'PostgreSQL', 'mui'],
         url: 'delivery_app',
-        href: 'https://github.com/oXide0/Delivery-App',
+        href: 'https://github.com/oXide0/delivery-app',
     },
 ];
 
@@ -35,11 +35,12 @@ export const experienceData = [
         company: 'Evolution Software',
         date: 'Sep 2023 - Present',
         text: [
-            'Creating reliable code, well structured, documented and compatible with different web browsers',
-            'Keeping up with new technological trends',
-            'Front-end software development, scripting and front-end software',
-            'Repairing, supplementing and updating developed software',
+            'Developed and maintained a variety of web applications using modern frontend technologies.',
+            'Conducted code reviews and provided feedback to ensure code quality and adherence to best practices.',
+            'Gained experience in backend development with Node.js, GraphQL, and Prisma ORM, ensuring seamless database integration and optimal performance.',
+            'Collaborated with cross-functional teams to define and refine project requirements, enhancing the overall user experience.',
+            'Continuously learned and adopted new technologies and methodologies to improve development processes and outcomes.',
         ],
-        skills: ['React', 'GraphQL', 'TypeScript', 'MUI', 'Storybook'],
+        skills: ['React', 'Node.js', 'TypeScript', 'GraphQl', 'MySQL'],
     },
 ];

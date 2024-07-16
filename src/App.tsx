@@ -33,10 +33,11 @@ const App = () => {
             if (experience.current && projects.current) {
                 if (
                     window.scrollY >= experience.current.offsetTop &&
-                    window.scrollY < projects.current.offsetTop
+                    window.scrollY < projects.current.offsetTop &&
+                    window.scrollY + 200 < projects.current.offsetTop
                 ) {
                     setActiveLink('experience');
-                } else if (window.scrollY >= projects.current.offsetTop) {
+                } else if (window.scrollY + 200 >= projects.current.offsetTop) {
                     setActiveLink('projects');
                 } else {
                     setActiveLink('about');
@@ -49,10 +50,6 @@ const App = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
-
-    // useEffect(() => {
-    //     console.log(1);
-    // });
 
     return (
         <div className='max-w-7xl mx-auto px-4 flex max-lg:flex-col max-lg:px-10'>
@@ -149,7 +146,7 @@ const App = () => {
                             <AiFillMail />
                         </button>
                         <a
-                            href='doc/Korchevskyi_Nazar_Frontend.pdf'
+                            href='doc/Korchevskyi_Nazar_Developer.pdf'
                             target='_blank'
                             className='text-slate-400 hover:text-slate-100'
                         >
@@ -172,18 +169,17 @@ const App = () => {
                         About me
                     </h2>
                     <p className='text-slate-300 text-md pt-10'>
-                        Starting in 2021, I got acquainted with web development. Obviously, I
-                        started with HTML and CSS😄. After studying these technologies and writing a
-                        few websites, I started to learn the front-end fully, and I really liked it.
-                        Of course, it was hard at times, but I went from HTML and CSS to TypeScript
-                        and React.
+                        Starting in 2021, I got acquainted with web development. I started with HTML
+                        and CSS😄. After studying these technologies and writing a few websites, I
+                        started to learn the web fully, and I really liked it. Of course, it was
+                        hard at times, but I went from HTML and CSS to TypeScript and React.
                     </p>
                     <p className='text-slate-300 text-md pt-6'>
-                        Today I consider myself a full-fledged front-end developer and I am eager to
+                        Today I consider myself a full-fledged web developer and I am eager to
                         contribute to the success of dynamic and innovative projects. I'm looking
                         forward to working with experienced professionals and taking on new
-                        challenges that will allow me to expand my knowledge and experience in
-                        front-end development.
+                        challenges that will allow me to expand my knowledge and experience in web
+                        development.
                     </p>
                     <p className='text-slate-300 text-md pt-6'>
                         In the future, I would like to develop in the direction of web development
@@ -194,7 +190,7 @@ const App = () => {
                     variants={blockAnimation}
                     initial='hidden'
                     whileInView='visible'
-                    className='flex flex-col gap-5 pt-40'
+                    className='flex flex-col gap-5 pt-44'
                     ref={experience}
                 >
                     <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>
@@ -208,7 +204,7 @@ const App = () => {
                     variants={blockAnimation}
                     initial='hidden'
                     whileInView='visible'
-                    className='pt-40 pb-16'
+                    className='pt-44 pb-16'
                     ref={projects}
                 >
                     <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>
