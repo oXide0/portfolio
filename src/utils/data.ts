@@ -32,7 +32,7 @@ export const experienceData = [
     {
         id: 1,
         title: 'Frontend Developer',
-        company: 'Evolution Software',
+        company: 'Everlution Software',
         date: 'Sep 2023 - Present',
         text: [
             'Developed and maintained a variety of web applications using modern frontend technologies.',

@@ -71,7 +71,7 @@ const App = () => {
                     whileInView='visible'
                     className='text-slate-200 text-2xl pt-2'
                 >
-                    Frontend Developer
+                    Software Engineer
                 </motion.p>
                 <motion.p
                     custom={3}
