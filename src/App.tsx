@@ -10,8 +10,7 @@ import { blockAnimation, textAnimation } from './utils/animation';
 import { projectsData, experienceData } from './utils/data';
 import { linksType } from './utils/types';
 
-const tooltipClasses =
-    'bg-slate-500 text-slate-100 text-sm text-center p-1 rounded-md left-24 bottom-5 absolute z-10';
+const tooltipClasses = 'bg-slate-500 text-slate-100 text-sm text-center p-1 rounded-md left-24 bottom-5 absolute z-10';
 
 const App = () => {
     const about = useRef<HTMLDivElement | null>(null);
@@ -62,7 +61,7 @@ const App = () => {
                     whileInView='visible'
                     className='text-slate-200 font-bold text-5xl'
                 >
-                    Nazar Korchevskyi
+                    Nazarii Korchevskyi
                 </motion.h1>
                 <motion.p
                     custom={2}
@@ -89,28 +88,13 @@ const App = () => {
                     whileInView='visible'
                     className='flex flex-col gap-6 pt-20'
                 >
-                    <Link
-                        path={about}
-                        value='about'
-                        activeLink={activeLink}
-                        setActiveLink={setActiveLink}
-                    >
+                    <Link path={about} value='about' activeLink={activeLink} setActiveLink={setActiveLink}>
                         about
                     </Link>
-                    <Link
-                        path={experience}
-                        value='experience'
-                        activeLink={activeLink}
-                        setActiveLink={setActiveLink}
-                    >
+                    <Link path={experience} value='experience' activeLink={activeLink} setActiveLink={setActiveLink}>
                         experience
                     </Link>
-                    <Link
-                        path={projects}
-                        value='projects'
-                        activeLink={activeLink}
-                        setActiveLink={setActiveLink}
-                    >
+                    <Link path={projects} value='projects' activeLink={activeLink} setActiveLink={setActiveLink}>
                         projects
                     </Link>
                 </motion.div>
@@ -136,17 +120,12 @@ const App = () => {
                         >
                             <AiFillLinkedin />
                         </a>
-                        <button
-                            onClick={copyToClipboard}
-                            className='text-slate-400 hover:text-slate-100'
-                        >
-                            <span className={tooltipActive ? tooltipClasses : 'hidden'}>
-                                Copied
-                            </span>
+                        <button onClick={copyToClipboard} className='text-slate-400 hover:text-slate-100'>
+                            <span className={tooltipActive ? tooltipClasses : 'hidden'}>Copied</span>
                             <AiFillMail />
                         </button>
                         <a
-                            href='doc/Korchevskyi_Nazar_Developer.pdf'
+                            href='doc/Korchevskyi_Nazarii_Developer.pdf'
                             target='_blank'
                             className='text-slate-400 hover:text-slate-100'
                         >
@@ -165,25 +144,22 @@ const App = () => {
                     ref={about}
                     className='pt-40'
                 >
-                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>
-                        About me
-                    </h2>
+                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>About me</h2>
                     <p className='text-slate-300 text-md pt-10'>
-                        Starting in 2021, I got acquainted with web development. I started with HTML
-                        and CSS😄. After studying these technologies and writing a few websites, I
-                        started to learn the web fully, and I really liked it. Of course, it was
-                        hard at times, but I went from HTML and CSS to TypeScript and React.
+                        Starting in 2021, I got acquainted with web development. I started with HTML and CSS😄. After
+                        studying these technologies and writing a few websites, I started to learn the web fully, and I
+                        really liked it. Of course, it was hard at times, but I went from HTML and CSS to TypeScript and
+                        React.
                     </p>
                     <p className='text-slate-300 text-md pt-6'>
-                        Today I consider myself a full-fledged web developer and I am eager to
-                        contribute to the success of dynamic and innovative projects. I'm looking
-                        forward to working with experienced professionals and taking on new
-                        challenges that will allow me to expand my knowledge and experience in web
-                        development.
+                        Today I consider myself a full-fledged web developer and I am eager to contribute to the success
+                        of dynamic and innovative projects. I'm looking forward to working with experienced
+                        professionals and taking on new challenges that will allow me to expand my knowledge and
+                        experience in web development.
                     </p>
                     <p className='text-slate-300 text-md pt-6'>
-                        In the future, I would like to develop in the direction of web development
-                        and participate in interesting projects.
+                        In the future, I would like to develop in the direction of web development and participate in
+                        interesting projects.
                     </p>
                 </motion.div>
                 <motion.div
@@ -193,9 +169,7 @@ const App = () => {
                     className='flex flex-col gap-5 pt-44'
                     ref={experience}
                 >
-                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>
-                        Experience
-                    </h2>
+                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>Experience</h2>
                     {experienceData.map((experience) => (
                         <ExperienceBlock key={experience.id} {...experience} />
                     ))}
@@ -207,9 +181,7 @@ const App = () => {
                     className='pt-44 pb-16'
                     ref={projects}
                 >
-                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>
-                        My Projects
-                    </h2>
+                    <h2 className='text-slate-100 text-4xl font-bold uppercase text-center'>My Projects</h2>
                     <div className='flex flex-col gap-10 pt-10'>
                         {projectsData.map((project) => (
                             <ProjectBlock key={project.id} {...project} />
