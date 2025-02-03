@@ -1,22 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-    background: #0F172A;
+    background: #0f172a;
     font-family: 'Montserrat', sans-serif;
 }
 ::selection {
     background: #4afad1;
-    color: #0F172A;
+    color: #0f172a;
 }
 ::-webkit-scrollbar {
-    width: 10px;
-    
+    width: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #0F172A;
+    background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
     background: rgb(20 184 166);
