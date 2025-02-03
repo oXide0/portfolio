@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     description: 'Welcome to my portfolio, showcasing my web development and design skills.',
     keywords: ['Nazarii Korchevskyi', 'personal website', 'portfolio', 'web development'],
     authors: { name: 'Nazarii Korchevskyi', url: 'https://nazarii.korchevskyi.com' },
+    icons: {
+        icon: '/logo.png',
+        apple: '/logo.png',
+    },
     openGraph: {
         title: 'Nazarii Korchevskyi - Web Developer',
         description: 'Welcome to my portfolio. Explore my work and skills in web development.',
