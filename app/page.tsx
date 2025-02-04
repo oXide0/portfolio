@@ -69,15 +69,15 @@ export default function Home() {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (experience.current && projects.current) {
-                if (
-                    window.scrollY >= experience.current.offsetTop &&
-                    window.scrollY < projects.current.offsetTop &&
-                    window.scrollY + 200 < projects.current.offsetTop
-                ) {
+            if (experience.current && projects.current && contact.current && about.current) {
+                const scrollPosition = window.scrollY + 200;
+
+                if (scrollPosition >= experience.current.offsetTop && scrollPosition < projects.current.offsetTop) {
                     setActiveLink('experience');
-                } else if (window.scrollY + 200 >= projects.current.offsetTop) {
+                } else if (scrollPosition >= projects.current.offsetTop && scrollPosition < contact.current.offsetTop) {
                     setActiveLink('projects');
+                } else if (scrollPosition >= contact.current.offsetTop) {
+                    setActiveLink('contact');
                 } else {
                     setActiveLink('about');
                 }
