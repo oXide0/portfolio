@@ -1,5 +1,6 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChangeEvent, FormEvent, useEffect, useRef, useState } from 'react';
@@ -11,7 +12,6 @@ import { Cursor } from './ui/cursor';
 import { ExperienceCard } from './ui/experienceCard';
 import { Link as UiLink } from './ui/link';
 import { ProjectCard } from './ui/projectCard';
-import emailjs from '@emailjs/browser';
 
 export default function Home() {
     const [activeLink, setActiveLink] = useState<'about' | 'experience' | 'projects' | 'contact'>('about');

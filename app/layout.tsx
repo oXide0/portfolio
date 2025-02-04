@@ -22,7 +22,14 @@ export const metadata: Metadata = {
         description: 'Welcome to my portfolio. Explore my work and skills in web development.',
         url: 'https://nazarii.korchevskyi.com',
         siteName: 'Nazarii Korchevskyi',
-        images: [],
+        images: [
+            {
+                url: '/preview.png',
+                width: 1911,
+                height: 877,
+                alt: 'Preview of Nazarii Korchevskyi website',
+            },
+        ],
     },
 };
 
