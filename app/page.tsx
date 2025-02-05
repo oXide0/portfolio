@@ -179,6 +179,7 @@ export default function Home() {
                         href='https://github.com/oXide0'
                         target='_blank'
                         className='text-slate-400 hover:text-slate-100'
+                        aria-label='GitHub Profile'
                     >
                         <AiFillGithub size='2em' />
                     </Link>
@@ -186,6 +187,7 @@ export default function Home() {
                         href='https://www.linkedin.com/in/nazar-korchevskyi/'
                         target='_blank'
                         className='text-slate-400 hover:text-slate-100'
+                        aria-label='LinkedIn Profile'
                     >
                         <AiFillLinkedin size='2em' />
                     </Link>
@@ -193,10 +195,12 @@ export default function Home() {
                         href='/Korchevskyi_Nazarii_Developer.pdf'
                         target='_blank'
                         className='text-slate-400 hover:text-slate-100'
+                        aria-label='See Resume'
                     >
                         <AiFillFilePdf size='2em' />
                     </Link>
                     <button
+                        aria-label='Copy Email Address'
                         onClick={() => {
                             navigator.clipboard.writeText('nazar.korchevskyi1@gmail.com');
                             alert('Email copied to clipboard!');
