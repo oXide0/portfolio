@@ -28,9 +28,9 @@ export const projectsData = [
 export const experienceData = [
     {
         id: 1,
-        title: 'Frontend Developer',
+        title: 'Full Stack Developer',
         company: 'Everlution Software',
-        date: 'Sep 2023 - Present',
+        date: 'Sep 2023 - March 2025',
         text: [
             'Developed and maintained a variety of web applications using modern frontend technologies.',
             'Conducted code reviews and provided feedback to ensure code quality and adherence to best practices.',

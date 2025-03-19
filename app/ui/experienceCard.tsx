@@ -8,7 +8,7 @@ interface ExperienceCardProps {
 
 export function ExperienceCard({ title, text, skills, date, company }: ExperienceCardProps) {
     return (
-        <div className='flex p-4 rounded-lg transition-all duration-200 hover:bg-slate-100/10 group relative'>
+        <div className='flex gap-4 p-4 rounded-lg transition-all duration-200 hover:bg-slate-100/10 group relative'>
             <div>
                 <p className='text-slate-400 text-sm w-40'>{date}</p>
             </div>
