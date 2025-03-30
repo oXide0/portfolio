@@ -38,6 +38,6 @@ export const experienceData = [
             'Collaborated with cross-functional teams to define and refine project requirements, enhancing the overall user experience.',
             'Continuously learned and adopted new technologies and methodologies to improve development processes and outcomes.',
         ],
-        skills: ['Node.js', 'TypeScript', 'GraphQL', 'Prisma', 'React'],
+        skills: ['React', 'Node.js', 'TypeScript', 'GraphQL', 'Prisma'],
     },
 ];
