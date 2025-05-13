@@ -23,7 +23,7 @@ export default function Home() {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: '',
+        message: ''
     });
     const [isSent, setIsSent] = useState(false);
 
@@ -41,7 +41,7 @@ export default function Home() {
                 {
                     from_name: formData.name,
                     from_email: formData.email,
-                    message: formData.message,
+                    message: formData.message
                 },
                 process.env.NEXT_PUBLIC_PUBLIC_KEY!
             )
@@ -62,7 +62,7 @@ export default function Home() {
         if (elementRef.current) {
             window.scrollTo({
                 top: elementRef.current.offsetTop,
-                behavior: 'smooth',
+                behavior: 'smooth'
             });
         }
     };
@@ -192,7 +192,7 @@ export default function Home() {
                         <AiFillLinkedin size='2em' />
                     </Link>
                     <Link
-                        href='/Korchevskyi_Nazarii_Developer.pdf'
+                        href='/Nazarii_Korchevskyi_Developer.pdf'
                         target='_blank'
                         className='text-slate-400 hover:text-slate-100'
                         aria-label='See Resume'
